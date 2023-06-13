@@ -63,7 +63,7 @@ def rectContour(contours):
         if area > 50:
             peri = cv2.arcLength(i, True)
             approx = cv2.approxPolyDP(i, 0.02 * peri, True)
-            if len(approx) == 4:
+            if len(approx) == 5:
                 rectCon.append(i)
     rectCon = sorted(rectCon, key=cv2.contourArea,reverse=True)
     #print(len(rectCon))
